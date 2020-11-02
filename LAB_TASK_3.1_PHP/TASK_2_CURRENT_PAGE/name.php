@@ -1,10 +1,3 @@
-<?php
-if(isset($_REQUEST['submit'])){
-     echo $_POST['name'];
-   
-}
-?>
-
 </html><!DOCTYPE html>
 <html>
 <head>
@@ -22,3 +15,10 @@ if(isset($_REQUEST['submit'])){
 	</form>
 </body>
 </html>
+
+<?php
+if(isset($_REQUEST['submit'])){
+     echo $_POST['name'];
+   
+}
+?>
