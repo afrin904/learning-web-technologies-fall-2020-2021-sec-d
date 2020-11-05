@@ -16,7 +16,7 @@
 		</tr>
 		<tr height="200px">
 			<td colspan="3">
-		<form method="POST" action="login.php">
+		<form method="POST" action="logincheck.php">
 			<fieldset>
 			<legend><h1><b>REGISTRATION</b></h1></legend>
 	    	
