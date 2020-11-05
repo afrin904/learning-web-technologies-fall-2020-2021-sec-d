@@ -33,7 +33,7 @@
 		</tr>
 		<tr height="200px">
 			<td colspan="3">
-				<form method="POST" action="login_dash.php">
+				<form method="POST" action="logincheck.php">
 					<fieldset>
 						<legend>LOGIN</legend>
 
@@ -42,7 +42,7 @@
 	    	  Password:<input type="Password" name="password" value=""><br>
 	    	  <hr>
 	    	  <input type="checkbox" name="rm" value="">Remember Me<br>
-	    	  <input type="submit" name="submit" value="submit">
+	    	  <input type="submit" name="submit" value="Submit">
 	    	  <a href="forget_password.php"><b>Forget Password?</b></a> 
 
 					</fieldset>
