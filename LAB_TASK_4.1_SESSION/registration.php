@@ -10,7 +10,7 @@
 				<img src="pic1.png" width="100px" height="100px" ></td>
 				<td align="right">
 				<a href="home_page.php"><b>HOME</b></a> | 
-				<a href="login.php"><b>Lgin</b></a> | 
+				<a href="login.php"><b>Login</b></a> | 
 				<a href="registration.php"><b>Registration</b></a> 
 			</td>
 		</tr>
