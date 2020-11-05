@@ -5,8 +5,11 @@
 <body>
 
 	<table width="900px" border="1" align="center">
-		<tr>
-			<td width="100px"><img src="pic1.png" width="100px" height="100px" colspan="3">
+		<tr colspan="3">
+			<td width="100px">
+
+				<img src="pic1.png" width="100px" height="100px" ></td>
+				<td align="right">
 				<a href="home_page.php"><b>HOME</b></a> | 
 				<a href="login.php"><b>CONTACT</b></a> | 
 				<a href="registration.php"><b>ABOUT</b></a> 
@@ -14,7 +17,7 @@
 		</tr>
 		<tr height="200px">
 			<td colspan="3" align="left">
-				Welcome to xCompany
+				<b>Welcome to xCompany</b>
 			</td>
 		</tr>
 				
