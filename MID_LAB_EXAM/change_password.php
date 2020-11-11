@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(isset($_SESSION['flag'])){
+	if(isset($_SESSION['flag']))
 ?>
 <center>
 	<form >
@@ -17,6 +17,7 @@
 						<input type="password" name="password" value=""/>								
 						<hr />
 						<input type="submit" name="submit" value="Change" />     
+						if{$_}
 						<a href="user_home.php">Home</a>
 						<a href="admin_home.php">Home</a>						
 					</fieldset>
