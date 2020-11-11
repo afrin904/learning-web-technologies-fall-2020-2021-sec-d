@@ -2,34 +2,40 @@
 	session_start();
 
 	if(isset($_REQUEST['submit'])){
-		$userid = $_REQUEST['userId'];
+		$id = $_REQUEST['id'];
 		$password = $_REQUEST['password'];
+		$name = $_REQUEST['name'];
+		$type = $_REQUEST['type'];
+		
 
-		if(empty($userid) || empty($password)){
+		if(empty($id) || empty($password)){
 			//echo "null submission";
 			header('location: login.php?msg=null');
 		}else{
 
-			if($_REQUEST['type']='User'){
+			if($id = '16-10101-2' && $name = 'bob'){
 				//$flag = true;
 				$_SESSION['flag'] = "true";
-				$_SESSION['userId'] = $userid;
+				$_SESSION['id'] = $id;
+				$_SESSION['password'] =$password;
+		        $_SESSION['name'] =$name;
+		        $_SESSION['type'] = $type ;
+
+				header('location: admin_home.php');
+			}elseif($id = '15-10101-1' && $name = 'Anne'){
+				//$flag = true;
+				$_SESSION['flag'] = "true";
+				$_SESSION['id'] = $id;
+				$_SESSION['password'] =$password;
+		        $_SESSION['name'] =$name;
+		        $_SESSION['type'] = $type ;
 
 				header('location: user_home.php');
 			}else{
-				if($_REQUEST['type']='Admin'){
-				//$flag = true;
-				$_SESSION['flag'] = "true";
-				$_SESSION['userId'] = $userid;
-				header('location: admin_home.php');
-			}else{
 				header('location: login.php?msg=invalid');
-			}
 			}
 		}
 	}else{
 		header('location: login.php');
-	}
-	
-
+	}	
 ?>
