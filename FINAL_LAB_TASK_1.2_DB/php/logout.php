@@ -4,6 +4,6 @@
 	//session_destroy();
 
 	setcookie('flag', 'true', time()-100, '/');
-	header('location: login.php');
+	header('location: ../view/login.php');
 
 ?>

@@ -3,6 +3,11 @@
 	require_once('../models/usersService.php');
 
     $id = $_GET['id'];
+    $username = $_GET['username'];
+	$password = $_GET['password'];
+	$email = $_GET['email'];
+	$type = $_GET['type'];
+
 	if(isset($_REQUEST['submit'])){
 
 		$id =$_REQUEST['id'];
@@ -20,6 +25,7 @@
 			];
 
 	updateUsers($user);
+	echo "User updated !";
 
 }
 ?>
@@ -37,10 +43,10 @@
 		        <fieldset>
 			    <legend>Update</legend>	
 				Id<br/><input type="text" name="id" value="<?= $id ; ?>"><br/>
-				Username<br/><input type="text" name="username"><br/>
-			    Password<br/><input type="password" name="password"><br/>
-			    Email<br/><input type="text" name="email"><br/>
-			    Type<br/><select name="type" ><br/><br/>
+				Username<br/><input type="text" name="username" value="<?= $username ; ?>"><br/>
+			    Password<br/><input type="password" name="password" value="<?= $password ; ?>"><br/>
+			    Email<br/><input type="text" name="email" value="<?= $email ; ?>"><br/>
+			    Type<br/><select name="type"><br/><br/>
 				    <option value="user" selected>User</option>
 				    <option value="admin">Admin</option>
                     <option value="student">Student</option>

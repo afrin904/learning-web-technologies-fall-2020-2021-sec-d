@@ -18,6 +18,7 @@
 			];
 
 	insertUsers($user);
+	echo "User Inserted !";
 
 }
 ?>

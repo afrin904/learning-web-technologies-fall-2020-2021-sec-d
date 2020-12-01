@@ -40,7 +40,7 @@
 					<td><?= $userlist[$i]['email'] ?></td>
 					<td><?= $userlist[$i]['type'] ?></td>
 					<td>
-						<a href="../php/update.php?id=<?= $userlist[$i]['id']  ?>"> EDIT</a> |
+						<a href="../php/update.php?id=<?= $userlist[$i]['id'] ?>&& username=<?= $userlist[$i]['username'] ?>&& password=<?= $userlist[$i]['password'] ?>&& email=<?= $userlist[$i]['email'] ?>&& type=<?= $userlist[$i]['type'] ?>"> EDIT/UPDATE</a> |
 						<a href="../php/delete.php?id=<?= $userlist[$i]['id']  ?>"> DELETE</a> 
 					</td>
 				</tr>

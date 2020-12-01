@@ -68,7 +68,9 @@
 	function deleteUsers($id){
 		$conn = getConnection();
 		$sql = "delete from users where id=$id";
+
 		$status = mysqli_query($conn, $sql);
+
 		if($status){
 			return true;
 		}else{
@@ -78,8 +80,10 @@
 
 	function updateUsers($user){
 		$conn = getConnection();
-		$sql ="update users set '{$user['id']}', '{$user['username']}', '{$user['password']}', '{$user['email']}', '{$user['type']}' WHERE id='$id'";
+		$sql ="update users set username = '{$user['username']}', password = '{$user['password']}', email = '{$user['email']}', type = '{$user['type']}' where id='{$user['id']}' ";
+
 	    $status = mysqli_query($conn, $sql);
+
 	    if($status){
 			return true;
 		}else{
