@@ -8,6 +8,12 @@
 		$password = $_REQUEST['password'];
 		$contactno = $_REQUEST['contactno'];
 
+		if(empty($name) || empty($username) ||empty($password) || empty($contactno))
+		{
+			echo "Null Submition";
+		}
+		else{
+
 		$user = [
 			    
 			    'name'=> $name,
@@ -18,6 +24,7 @@
 
 	insertUsers($user);
 	echo "Registration Done !";
+}
 
 }
 ?>

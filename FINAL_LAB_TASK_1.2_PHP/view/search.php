@@ -2,7 +2,7 @@
     require_once('../php/header.php');
 	require_once('../models/usersService.php');
 
-    $id = $_GET['id'];
+	 $id = $_GET['id'];
     $name = $_GET['name'];
     $username = $_GET['username'];
 	$password = $_GET['password'];
@@ -24,15 +24,18 @@
 				'contactno'=>$contactno	
 			];
 
-	updateUsers($user);
+	searchUsers($id);
 	echo "User updated !";
 
 }
+
+   
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Update</title>
+	<title>Search</title>
 </head>
 <body>
 	<center>
@@ -41,14 +44,14 @@
 		<tr>
 			<td>
 		        <fieldset>
-			    <legend>Update</legend>	
+			    <legend>Search</legend>	
 				Id<br/><input type="text" name="id" value="<?= $id ; ?>"><br/>
 				Name<br/><input type="text" name="name" value="<?= $name ; ?>"><br/>
 				Username<br/><input type="text" name="username" value="<?= $username ; ?>"><br/>
 			    Password<br/><input type="password" name="password" value="<?= $password ; ?>"><br/>
 			    Contact Number<br/><input type="text" name="contactno" value="<?= $contactno ; ?>"><br/>
 			     <br/><hr><hr>
-					<input type="submit" name="submit" value="Add">
+					<input type="submit" name="submit" value="Search">
 		        </fieldset>
 	        </td>
         </tr>

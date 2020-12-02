@@ -41,7 +41,7 @@
 					<td><?= $userlist[$i]['contactno'] ?></td>
 					
 					<td>
-						<a href="../php/update.php?id=<?= $userlist[$i]['id'] ?>&& name=<?= $userlist[$i]['name'] ?>&& username=<?= $userlist[$i]['username'] ?>&& password=<?= $userlist[$i]['password'] ?>&& email=<?= $userlist[$i]['contactno'] ?>"> EDIT/UPDATE</a> |
+						<a href="../php/update.php?id=<?= $userlist[$i]['id'] ?>&& name=<?= $userlist[$i]['name'] ?>&& username=<?= $userlist[$i]['username'] ?>&& password=<?= $userlist[$i]['password'] ?>&& contactno=<?= $userlist[$i]['contactno'] ?>"> EDIT/UPDATE</a> |
 						<a href="../php/delete.php?id=<?= $userlist[$i]['id']  ?>"> DELETE</a> 
 					</td>
 				</tr>

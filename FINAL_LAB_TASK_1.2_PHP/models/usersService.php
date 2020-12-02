@@ -80,7 +80,7 @@
 
 	function updateUsers($user){
 		$conn = getConnection();
-		$sql ="update users set name = '{$user['name']}',username = '{$user['username']}', password = '{$user['password']}', email = '{$user['email']}', type = '{$user['type']}' where id='{$user['id']}' ";
+		$sql ="update users set name = '{$user['name']}',username = '{$user['username']}', password = '{$user['password']}', contactno = '{$user['contactno']}' ";
 
 	    $status = mysqli_query($conn, $sql);
 
@@ -92,4 +92,16 @@
 
 	}
 
+function searchUsers($id){
+		$conn = getConnection();
+		$sql = "select * from users where id=$id";
+
+		$status = mysqli_query($conn, $sql);
+
+		if($status){
+			return true;
+		}else{
+			return false;
+		}
+	}
 ?>
