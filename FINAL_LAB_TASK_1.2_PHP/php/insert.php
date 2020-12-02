@@ -3,28 +3,29 @@
 	require_once('../models/usersService.php');
 	if(isset($_REQUEST['submit'])){
 
-		$name = $_REQUEST['name'];
+		$id =$_REQUEST['id'];
 		$username = $_REQUEST['username'];
 		$password = $_REQUEST['password'];
-		$contactno = $_REQUEST['contactno'];
+		$email = $_REQUEST['email'];
+		$type = $_REQUEST['type'];
 
 		$user = [
-			    
-			    'name'=> $name,
+			    'id' => $id,
 				'username'=> $username,
 				'password'=> $password,
-				'contactno'=> $contactno
+				'email'=>$email,
+				'type'=> $type
 			];
 
 	insertUsers($user);
-	echo "Registration Done !";
+	echo "User Inserted !";
 
 }
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration</title>
+	<title>Insert</title>
 </head>
 <body>
 	<center>
@@ -33,12 +34,17 @@
 		<tr>
 			<td>
 		        <fieldset>
-			    <legend>Registration</legend>	
-				Name<br/><input type="text" name="name"><br/>
+			    <legend>Insert</legend>	
+				Id<br/><input type="text" name="id"><br/>
 				Username<br/><input type="text" name="username"><br/>
 			    Password<br/><input type="password" name="password"><br/>
-			    Contact Number<br/><input type="text" name="contactno"><br/>
-					<input type="submit" name="submit" value="Register">
+			    Email<br/><input type="text" name="email"><br/>
+			    Type<br/><select name="type" ><br/><br/>
+				    <option value="user" selected>User</option>
+				    <option value="admin">Admin</option>
+                    <option value="student">Student</option>
+			        </select> <br/><hr><hr>
+					<input type="submit" name="submit" value="Add">
 		        </fieldset>
 	        </td>
         </tr>

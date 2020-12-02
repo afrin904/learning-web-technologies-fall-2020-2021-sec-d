@@ -23,10 +23,10 @@
 	<table border="1">
 		<tr>
 			<td>ID</td>
+			<td>Name</td>
 			<td>Username</td>
 			<td>Password</td>
-			<td>Email</td>
-			<td>Type</td>
+			<td>Contactno</td>
 			<td>Action</td>
 		</tr>
 
@@ -35,12 +35,13 @@
 		?>
 				<tr>
 					<td><?= $userlist[$i]['id'] ?></td>
+					<td><?= $userlist[$i]['name'] ?></td>
 					<td><?= $userlist[$i]['username'] ?></td>
 					<td><?= $userlist[$i]['password'] ?></td>
-					<td><?= $userlist[$i]['email'] ?></td>
-					<td><?= $userlist[$i]['type'] ?></td>
+					<td><?= $userlist[$i]['contactno'] ?></td>
+					
 					<td>
-						<a href="../php/update.php?id=<?= $userlist[$i]['id'] ?>&& username=<?= $userlist[$i]['username'] ?>&& password=<?= $userlist[$i]['password'] ?>&& email=<?= $userlist[$i]['email'] ?>&& type=<?= $userlist[$i]['type'] ?>"> EDIT/UPDATE</a> |
+						<a href="../php/update.php?id=<?= $userlist[$i]['id'] ?>&& name=<?= $userlist[$i]['name'] ?>&& username=<?= $userlist[$i]['username'] ?>&& password=<?= $userlist[$i]['password'] ?>&& email=<?= $userlist[$i]['contactno'] ?>"> EDIT/UPDATE</a> |
 						<a href="../php/delete.php?id=<?= $userlist[$i]['id']  ?>"> DELETE</a> 
 					</td>
 				</tr>

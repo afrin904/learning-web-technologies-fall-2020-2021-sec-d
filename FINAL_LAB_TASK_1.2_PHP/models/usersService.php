@@ -53,7 +53,7 @@
 	function insertUsers($user){
 
 		$conn = getConnection();
-		$sql = "insert into users values('{$user['id']}', '{$user['username']}', '{$user['password']}', '{$user['email']}', '{$user['type']}')";
+		$sql = "insert into users( name,username , password , contactno) values('{$user['name']}' ,'{$user['username']}', '{$user['password']}', '{$user['contactno']}')";
 
 		$status = mysqli_query($conn, $sql);
 
@@ -80,7 +80,7 @@
 
 	function updateUsers($user){
 		$conn = getConnection();
-		$sql ="update users set username = '{$user['username']}', password = '{$user['password']}', email = '{$user['email']}', type = '{$user['type']}' where id='{$user['id']}' ";
+		$sql ="update users set name = '{$user['name']}',username = '{$user['username']}', password = '{$user['password']}', email = '{$user['email']}', type = '{$user['type']}' where id='{$user['id']}' ";
 
 	    $status = mysqli_query($conn, $sql);
 
