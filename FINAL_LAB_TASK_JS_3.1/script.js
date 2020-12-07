@@ -164,6 +164,25 @@ if (a2.selected == true) {
 
 function f7(){
 
+let data1= document.getElementById('ui').value;
+let data2= document.getElementById('p').value;
 
-	
+if (data1 =='' ) {
+	document.getElementById('head').innerHTML ='UserId cannot be empty';
+}
+
+else if(data1 >=0 && data1<=9999 ) {
+		
+	document.getElementById('head').innerHTML =data1;
+}
+else {
+	document.getElementById('head').innerHTML ='Invalid UserId';
+}
+if (data2 =='' ) {
+	document.getElementById('head1').innerHTML ='No file Selected';
+}
+else{
+	document.getElementById('head1').innerHTML =data2;
+}
+
 }
