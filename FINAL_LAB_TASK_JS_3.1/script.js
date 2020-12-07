@@ -40,11 +40,29 @@ function f2(){
 	if(data == ''){
 		document.getElementById('head').innerHTML = 'Null Submission ';		
 	}
-	else if(data >='a' && data <='z' || data>='A' && data <='Z' || data == '.' || data == '@'){
+	else if(data >='a' && data <='z' || data>='A' && data <='Z' ){
 		document.getElementById('head').innerHTML = data;
      }
       else{
 		document.getElementById('head').innerHTML = 'error';
+	}
+
+}
+
+function f3(){
+
+ let data= document.getElementById('gender').value;
+     if(data == ''){
+		document.getElementById('head').innerHTML = 'Null Submission ';		
+	}
+    else if(data == 'male'){
+		document.getElementById('head').innerHTML = 'Male';		
+	}
+	else if(data == 'female'){
+		document.getElementById('head').innerHTML = 'female';
+     }
+      else{
+		document.getElementById('head').innerHTML = 'others';
 	}
 
 }
