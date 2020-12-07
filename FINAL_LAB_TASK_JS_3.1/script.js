@@ -35,4 +35,16 @@ function f1(){
 
 
 function f2(){
+	let data= document.getElementById('email').value;
+
+	if(data == ''){
+		document.getElementById('head').innerHTML = 'Null Submission ';		
+	}
+	else if(data >='a' && data <='z' || data>='A' && data <='Z' || data == '.' || data == '@'){
+		document.getElementById('head').innerHTML = data;
+     }
+      else{
+		document.getElementById('head').innerHTML = 'error';
+	}
+
 }
