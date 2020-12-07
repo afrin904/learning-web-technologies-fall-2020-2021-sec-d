@@ -74,3 +74,62 @@ function f3(){
 	}
 
 }
+
+function f4(){
+
+ let dd = document.getElementById('dd').value;
+ let mm = document.getElementById('mm').value;
+ let yy = document.getElementById('yy').value;
+
+    if(dd == '' || mm == '' || yy == ''){
+		document.getElementById('1').innerHTML = 'Null Submission ';		
+	}
+	else if(dd >= 0 && dd <=31 || mm >=1 && mm <=12 || yy >=1900 && yy <= 2016 ){
+		document.getElementById('1').innerHTML = dd ;
+		document.getElementById('2').innerHTML ="/";	
+		document.getElementById('3').innerHTML = mm ;
+		document.getElementById('4').innerHTML ="/";	
+		document.getElementById('5').innerHTML = yy ;	
+	}
+	
+      else{
+		document.getElementById('1').innerHTML = 'Invalid Date!';
+	}
+
+}
+
+function f5(){
+
+ let s = document.getElementById('s');
+ let h= document.getElementById('h');
+ let b = document.getElementById('b');
+
+
+ if (s.checked==true) {
+ 	document.getElementById('1').innerHTML = s.value;		
+ }
+ if(h.checked==true){
+ 	document.getElementById('2').innerHTML = h.value;
+ }
+ if(b.checked==true){
+ 	document.getElementById('3').innerHTML = b.value;
+ }
+ else{
+ 	return false;
+ }
+
+}
+
+
+function f6(){
+
+
+
+}
+
+
+function f7(){
+
+
+	
+}
