@@ -13,7 +13,7 @@
 //let student = ['alamin', '123', 'CS'];
 
 function f1(){
-	let data[]= document.getElementById('name').value;
+	let data= document.getElementById('name').value;
 
 	if(data == ''){
 		document.getElementById('head').innerHTML = 'Null Submission ';		
@@ -22,15 +22,17 @@ function f1(){
 		document.getElementById('head').innerHTML = 'Length is too Short';	
 	}
 	
-	else if(data<='a' && data >='z' || data<='A' && data >='Z' || data == '.' || data == '-'){
+	else if(data >='a' && data <='z' || data>='A' && data <='Z' || data == '.' || data == '-'){
 		document.getElementById('head').innerHTML = data;
      }
-     else if(){
-     	document.getElementById('head').innerHTML = 'Must start with letter';
-     }
+    
     else{
-		document.getElementById('head').innerHTML = data;
+		document.getElementById('head').innerHTML = 'error';
 	}
 	
 
+}
+
+
+function f2(){
 }
