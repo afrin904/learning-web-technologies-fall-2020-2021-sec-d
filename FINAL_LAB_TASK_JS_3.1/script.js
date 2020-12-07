@@ -21,6 +21,10 @@ function f1(){
 	else if(data.length <2){
 		document.getElementById('head').innerHTML = 'Length is too Short';	
 	}
+
+	else if (data >=0 && data <=9){
+		document.getElementById('head').innerHTML = 'error';
+	}
 	
 	else if(data >='a' && data <='z' || data>='A' && data <='Z' || data == '.' || data == '-'){
 		document.getElementById('head').innerHTML = data;
@@ -40,29 +44,33 @@ function f2(){
 	if(data == ''){
 		document.getElementById('head').innerHTML = 'Null Submission ';		
 	}
-	else if(data >='a' && data <='z' || data>='A' && data <='Z' ){
+	else if(data.length <3 ){
+		document.getElementById('head').innerHTML = 'Invalid Email';	
+	}
+	else if( data.includes("@gmail.com")){
 		document.getElementById('head').innerHTML = data;
      }
       else{
-		document.getElementById('head').innerHTML = 'error';
+		document.getElementById('head').innerHTML = 'Invalide Email!';
 	}
 
 }
 
 function f3(){
 
- let data= document.getElementById('gender').value;
-     if(data == ''){
-		document.getElementById('head').innerHTML = 'Null Submission ';		
+ let m = document.getElementById('m');
+ let f = document.getElementById('f');
+ let o = document.getElementById('o');
+
+     if(m.checked ==true ){
+		document.getElementById('head').innerHTML = m.value;		
 	}
-    else if(data == 'male'){
-		document.getElementById('head').innerHTML = 'Male';		
+    else if(f.checked ==true){
+		document.getElementById('head').innerHTML = f.value;		
 	}
-	else if(data == 'female'){
-		document.getElementById('head').innerHTML = 'female';
-     }
-      else{
-		document.getElementById('head').innerHTML = 'others';
+	
+     else{
+		document.getElementById('head').innerHTML = o.value;
 	}
 
 }
