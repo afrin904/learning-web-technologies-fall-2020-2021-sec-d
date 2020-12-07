@@ -122,9 +122,43 @@ function f5(){
 
 
 function f6(){
+ let a1 = document.getElementById('1');
+ let a2= document.getElementById('2');
+ let a3 = document.getElementById('3');
+ let a4 = document.getElementById('4');
+ let a5= document.getElementById('5');
+ let a6 = document.getElementById('6');
+ let a7= document.getElementById('7');
+ let a8 = document.getElementById('8');
 
+if (a1.selected == true) {
+ 	document.getElementById('head').innerHTML = a1.value;		
+ }
 
-
+if (a2.selected == true) {
+ 	document.getElementById('head').innerHTML = a2.value;		
+ }
+ if (a3.selected == true) {
+ 	document.getElementById('head').innerHTML = a3.value;		
+ }
+ if (a4.selected == true) {
+ 	document.getElementById('head').innerHTML = a4.value;		
+ }
+ if (a5.selected == true) {
+ 	document.getElementById('head').innerHTML = a5.value;		
+ }
+ if (a6.selected == true) {
+ 	document.getElementById('head').innerHTML = a6.value;		
+ }
+ if (a7.selected == true) {
+ 	document.getElementById('head').innerHTML = a7.value;		
+ }
+ if (a8.selected == true) {
+ 	document.getElementById('head').innerHTML = a8.value;		
+ }
+ else{
+ 	return false;
+ }
 }
 
 
