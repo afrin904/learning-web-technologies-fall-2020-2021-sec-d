@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2020 at 05:06 AM
+-- Generation Time: Dec 14, 2020 at 05:12 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `reg` (
-  `id` int(8) NOT NULL,
+  `id` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
   `conpassword` varchar(30) NOT NULL,
   `name` varchar(30) NOT NULL,
@@ -41,12 +41,10 @@ CREATE TABLE `reg` (
 --
 
 INSERT INTO `reg` (`id`, `password`, `conpassword`, `name`, `email`, `user_type`) VALUES
-(1, 'sadia', '', 'Sadia Afrin', 'afrins1598@gmail.com', ''),
-(1, 'sadia', 'sadia', 'Sadia Afrin', 'afrins1598@gmail.com', ''),
-(15, 'bob', 'bob', 'Bob', 'bob@aiub.edu', ''),
-(16, 'anne', 'anne', 'Anne', 'anne@gmail.com', ''),
-(16, 'kent', 'kent', 'Kent', 'kent@yahoo.com', ''),
-(16, 'james', 'james', 'James', 'james@outlook.com', '');
+('15-10101-1', 'bob', 'bob', 'Bob', 'bob@aiub.edu', ''),
+('16-10102-2', 'anne', 'anne', 'Anne', 'anne@gmail.com', ''),
+('16-10103-2', 'kent', 'kent', 'Kent', 'kent@yahoo.com', ''),
+('16-10104-3', 'james', 'james', 'James', 'james@outlook.com', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
