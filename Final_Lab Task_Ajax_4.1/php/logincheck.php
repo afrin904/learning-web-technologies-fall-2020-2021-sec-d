@@ -1,42 +1,33 @@
 <?php
-	session_start();
+	//session_start();
+	require_once('../models/usersService.php');
 
 	if(isset($_REQUEST['submit'])){
 		$id = $_REQUEST['id'];
 		$password = $_REQUEST['password'];
-		$name = $_REQUEST['name'];
-		$type = $_REQUEST['type'];
-		
 
 		if(empty($id) || empty($password)){
 			//echo "null submission";
-			header('location: login.php?msg=null');
+			header('location: ../view/login.php?msg=null');
 		}else{
 
-			if($id == '16-10101-2' && $password == 'bob'){
-				//$flag = true;
-				$_SESSION['flag'] = "true";
-				$_SESSION['id'] = $id;
-				$_SESSION['password'] =$password;
-		        $_SESSION['name'] =$name;
-		        $_SESSION['type'] = $type ;
+			$user = [
+				'id'=> $id,
+				'password'=> $password
+			];
 
-				header('location: admin_home.php');
+			$status = validate($user);
 
-			}elseif($id == '15-10101-1' && $password == 'Anne'){
-				//$flag = true;
-				$_SESSION['flag'] = "true";
-				$_SESSION['id'] = $id;
-				$_SESSION['password'] =$password;
-		        $_SESSION['name'] =$name;
-		        $_SESSION['type'] = $type ;
-
-				header('location: user_home.php');
+			if($status){
+				setcookie('flag', $id, time()+3600, '/');
+				header('location: ../view/user_home.php');
 			}else{
-				header('location: login.php?msg=invalid');
+				header('location: ../view/login.php?msg=invalid');
 			}
 		}
 	}else{
-		header('location: login.php');
-	}	
+		header('location: ../view/login.php');
+	}
+	
+
 ?>

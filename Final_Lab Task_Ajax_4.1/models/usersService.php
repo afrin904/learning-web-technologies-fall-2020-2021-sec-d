@@ -5,7 +5,7 @@
 	function validate($user){
 			
 		$conn = getConnection();
-		$sql = "select * from ajax where username='{$user['username']}' and password='{$user['password']}'";
+		$sql = "select * from reg where id='{$user['id']}' and password='{$user['password']}'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 
@@ -23,7 +23,7 @@
 	function insertUsers($user){
 
 		$conn = getConnection();
-		$sql = "insert into ajax( id,password ,conpasswod, name,email,user_type) values('{$user['id']}' , '{$user['password']}', '{$user['conpasswod']}','{$user['name']}','{$user['email']}','{$user['user_type']}')";
+		$sql = "insert into reg( id, password ,conpassword, name, email ,user_type) values ('{$user['id']}' , '{$user['password']}', '{$user['conpassword']}','{$user['name']}','{$user['email']}','{$user['user_type']}')";
 
 		$status = mysqli_query($conn, $sql);
 

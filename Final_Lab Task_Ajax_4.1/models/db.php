@@ -3,7 +3,7 @@
 	$servername = 'localhost';
 	$dbuser		= 'root';
 	$dbpass		= '';
-	$database	= 'ajax';
+	$database	= 'ajax1';
 
 	function getConnection(){
 		global $servername;

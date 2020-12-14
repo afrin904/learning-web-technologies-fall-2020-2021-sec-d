@@ -15,7 +15,7 @@
 	}
 ?>
 <center>
-<form method="post" action="loginCheck.php">
+<form method="post" action="../php/loginCheck.php">
 	<table border="0" cellspacing="0" cellpadding="0">
 		<tr>
 			<td>
@@ -27,7 +27,7 @@
 					<input type="password" name="password">
 					<br /><hr/>
 					<input type="submit" name="submit" value="Login">
-					<a href="registration.php">Register</a>
+					<a href="../php/registration.php">Register</a>
 				</fieldset>
 			</td>
 		</tr>                                
