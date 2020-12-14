@@ -23,7 +23,7 @@
 	function insertUsers($user){
 
 		$conn = getConnection();
-		$sql = "insert into reg( id, password ,conpassword, name, email ,user_type) values ('{$user['id']}' , '{$user['password']}', '{$user['conpassword']}','{$user['name']}','{$user['email']}','{$user['user_type']}')";
+		$sql = "insert into reg ( id, password ,conpassword, name, email ,user_type) values ('{$user['id']}' , '{$user['password']}', '{$user['conpassword']}','{$user['name']}','{$user['email']}','{$user['user_type']}')";
 
 		$status = mysqli_query($conn, $sql);
 

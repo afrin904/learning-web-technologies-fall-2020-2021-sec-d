@@ -29,7 +29,7 @@
 <?php
 
 	}else{
-		header('location: login.php?msg=login_first');
+		header('location: ../view/login.php?msg=login_first');
 	}
 
 ?>
